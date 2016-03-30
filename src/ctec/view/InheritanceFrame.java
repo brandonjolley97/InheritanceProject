@@ -1,5 +1,6 @@
 package ctec.view;
 
-public class InheritanceFrame {
+public class InheritanceFrame 
+{
 
 }
