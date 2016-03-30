@@ -1,6 +1,6 @@
 package ctec.model;
 
-public class IPhone 
+public class Man 
 {
 
 }
