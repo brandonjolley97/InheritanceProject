@@ -5,12 +5,9 @@ package ctec.model;
 public interface HeroThing 
 {
 	
-	public void fly();
+	public void heroLevel();
+	public void
 	
-	public void wristRocket();
-	
-	public void ionBlaster();
-	
-	public void philanthropist();
+	public int compareTo(Object thing);
 	
 }

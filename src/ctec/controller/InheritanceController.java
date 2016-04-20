@@ -1,15 +1,35 @@
 package ctec.controller;
 
 import ctec.controller.InheritanceRunner;
+import ctec.model.*;
+import ctec.view.*;
+import java.util.ArrayList;
 
 public class InheritanceController 
 {
-	private ArrayList<HeroThings> heroThings;
+	private int start;
+	private InheritanceFrame baseFrame;
 	
-	public String showHeroLevels()
+	private ArrayList<HeroThing> heroThings;
+	
+	public InheritanceController()
 	{
-		
+		this.heroThings = new ArrayList<HeroThing>();
+		baseFrame = new InheritanceFrame(this);
 	}
+	
+	
+	public String showHeroLevel()
+	{
+		String heroLevels = "";
+		for(HeroThing currentHero : heroThings)
+		{
+			heroLevels.concat("This is a " + currentHero.toString() + " and has a hero level of " + currentHero.heroLevel() + "\n");
+		}
+		
+		return heroLevels;
+	}
+
 	
 	private void makeHeroList()
 	{
@@ -24,7 +44,9 @@ public class InheritanceController
 	
 	private void swap(int firstLocation, int secondLocation)
 	{
-		
+		HeroThing temp = heroThings.get(firstLocation);
+		heroThings.set(firstLocation, heroThings.get(secondLocation));
+		heroThings.set(secondLocation, temp);
 	}
 	
 	public void insertionSort()
@@ -34,8 +56,51 @@ public class InheritanceController
 			int innerLoop = outerLoop;
 			while(innerLoop > 0 && (heroThings.get(innerLoop-1).compareTo(heroThings.get(innerLoop))) > 0)
 			{
-				
+				swap(innerLoop, innerLoop-1);
+				innerLoop--;
 			}
 		}
 	}
+	
+	public void quicksort(int low, int high)
+	{
+		if (low < high)
+		{
+			int midpoint = partition(low, high);
+			quicksort(low, midpoint-1);
+			quicksort(midpoint+1, high);
+		}
+	}
+	
+	private int partition(int low, int high)
+	{
+		int position = low;
+		HeroThing pivot = heroThings.get(high);
+		
+		for(int spot = low; spot < high -1; spot++)
+		{
+			if(heroThings.get(spot).compareTo(pivot) <= 0)
+			{
+				swap(position, spot);
+				position++;
+			}
+		}
+		swap(position, high);
+		
+		return position;
+		
+	}
+	
+	public ArrayList<HeroThing> getHeroThings()
+	{
+		return heroThings;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

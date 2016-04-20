@@ -2,6 +2,8 @@ package ctec.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import ctec.controller.InheritanceController;
 
 public class InheritancePanel extends JPanel
@@ -11,21 +13,22 @@ public class InheritancePanel extends JPanel
 	private JLabel ironLabel;
 	private JLabel manLabel;
 	private JLabel suitLabel;
+	private JTextArea textDisplay;
 	
 	public InheritancePanel(InheritanceController baseController)
 	{
 		this.baseController = baseController;
 		
-		inheritanceButton = new JButton("");
-		ironLabel = new JLabel("");
-		manLabel = new JLabel("");
-		suitLabel = new JLabel("");
+		inheritanceButton = new JButton("SORT");
+		ironLabel = new JLabel("Iron");
+		manLabel = new JLabel("Man");
+		suitLabel = new JLabel("Suit");
+		textDisplay = new JTextArea(15,20);
+		
 		
 		setupPanel();
 		setupLayout();
 		setupListeners();
-		
-		
 		
 	}
 	
@@ -34,6 +37,7 @@ public class InheritancePanel extends JPanel
 		this.add(ironLabel);
 		this.add(manLabel);
 		this.add(suitLabel);
+		this.add(textDisplay);
 		this.add(inheritanceButton);
 	}
 	

@@ -1,16 +1,29 @@
 package ctec.model;
 
+import ctec.model.*;
 
-
-public interface IronMan 
+public class IronMan 
 {
-	
-	public void fly();
-	
-	public void wristRocket();
-	
-	public void ionBlaster();
-	
-	public void philanthropist();
+	public int compareTo(Object compared)
+	{
+		int comparedValue = Integer.MIN_VALUE;
+		
+		if(compared instanceof HeroThing)
+		{
+			if(this.heroLevel() > ((HeroThing) compared).heroLevel())
+			{
+				comparedValue = 1;
+			}
+			else if(this.heroLevel() < ((HeroThing) compared).heroLevel())
+			{
+				comparedValue = -1;
+			}
+			else
+			{
+				comparedValue = 0;
+			}
+		}
+		return comparedValue;
+	}
 
 }
