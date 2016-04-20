@@ -39,7 +39,7 @@ public class InheritanceController
 	}
 	public void start()
 	{
-		
+		makeHeroList();
 	}
 	
 	private void swap(int firstLocation, int secondLocation)
