@@ -24,7 +24,7 @@ public class InheritanceController
 		String heroLevels = "";
 		for(HeroThing currentHero : heroThings)
 		{
-			heroLevels.concat("This is a " + currentHero.toString() + " and has a hero level of " + currentHero.heroLevel() + "\n");
+			heroLevels += "This is a " + currentHero.toString() + " and has a hero level of " + currentHero.heroLevel() + "\n";
 		}
 		
 		return heroLevels;

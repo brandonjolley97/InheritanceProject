@@ -10,9 +10,6 @@ public class InheritancePanel extends JPanel
 {
 	private InheritanceController baseController;
 	private JButton inheritanceButton;
-	private JLabel ironLabel;
-	private JLabel manLabel;
-	private JLabel suitLabel;
 	private JTextArea textDisplay;
 	
 	public InheritancePanel(InheritanceController baseController)
@@ -20,10 +17,8 @@ public class InheritancePanel extends JPanel
 		this.baseController = baseController;
 		
 		inheritanceButton = new JButton("SORT");
-		ironLabel = new JLabel("Iron");
-		manLabel = new JLabel("Man");
-		suitLabel = new JLabel("Suit");
 		textDisplay = new JTextArea(15,20);
+		
 		
 		
 		setupPanel();
@@ -34,11 +29,10 @@ public class InheritancePanel extends JPanel
 	
 	public void setupPanel()
 	{
-		this.add(ironLabel);
-		this.add(manLabel);
-		this.add(suitLabel);
+
 		this.add(textDisplay);
 		this.add(inheritanceButton);
+		textDisplay.setText(baseController.showHeroLevel());
 	}
 	
 	public void setupLayout()
@@ -52,9 +46,8 @@ public class InheritancePanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				ironLabel.setText("");
-				manLabel.setText("");
-				suitLabel.setText("");
+				baseController.insertionSort();
+				textDisplay.setText(baseController.showHeroLevel());
 			}
 		});
 	}

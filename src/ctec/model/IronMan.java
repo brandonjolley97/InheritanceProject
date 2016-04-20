@@ -2,7 +2,7 @@ package ctec.model;
 
 import ctec.model.*;
 
-public class IronMan 
+public abstract class IronMan implements HeroThing
 {
 	public int compareTo(Object compared)
 	{
@@ -25,5 +25,7 @@ public class IronMan
 		}
 		return comparedValue;
 	}
+	
+	
 
 }
