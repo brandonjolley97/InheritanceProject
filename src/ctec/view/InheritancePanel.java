@@ -48,6 +48,8 @@ public class InheritancePanel extends JPanel
 			{
 				baseController.insertionSort();
 				textDisplay.setText(baseController.showHeroLevel());
+				textDisplay.append(baseController.showPhilanthropist());
+				textDisplay.append(baseController.showVillansKilled());
 			}
 		});
 	}

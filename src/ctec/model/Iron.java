@@ -2,23 +2,29 @@ package ctec.model;
 
 public class Iron extends IronMan
 {
+	
+	public String heroMeme()
+	{
+		String iron = "Iron";
+		return iron;
+	}
 
 	public int heroLevel() 
 	{
 		
-		return 0;
+		return 200;
 	}
 
 	public int philanthropist() 
 	{
 
-		return 0;
+		return 2000000000;
 	}
 
 	public int villainsKilled(int killCount)
 	{
 
-		return 0;
+		return 1042;
 	}
 
 }

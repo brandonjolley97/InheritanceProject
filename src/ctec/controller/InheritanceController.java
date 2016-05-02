@@ -24,10 +24,32 @@ public class InheritanceController
 		String heroLevels = "";
 		for(HeroThing currentHero : heroThings)
 		{
-			heroLevels += "This is a " + currentHero.toString() + " and has a hero level of " + currentHero.heroLevel() + "\n";
+			heroLevels += currentHero.toString() + currentHero.heroLevel() + " hero levels \n";
 		}
 		
 		return heroLevels;
+	}
+	
+	public String showPhilanthropist()
+	{
+		String philanthropist = "";
+		for(HeroThing currentHero : heroThings)
+		{
+			philanthropist += currentHero.toString() + currentHero.heroLevel() + " dollars \n";
+		}
+		
+		return philanthropist;
+	}
+	
+	public String showVillansKilled()
+	{
+		String villansKilled = "";
+		for(HeroThing currentHero : heroThings)
+		{
+			villansKilled += currentHero.toString() + currentHero.heroLevel() + " villains \n";
+		}
+		
+		return villansKilled;
 	}
 
 	

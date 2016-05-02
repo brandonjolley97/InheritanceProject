@@ -2,23 +2,28 @@ package ctec.model;
 
 public class Suit extends IronMan
 {
-
+	public String heroMeme()
+	{
+		String suit = "Suit";
+		return suit;
+	}
+	
 	public int heroLevel()
 	{
 
-		return 0;
+		return 3000;
 	}
 
 	public int philanthropist() 
 	{
 
-		return 0;
+		return 75;
 	}
 
 	public int villainsKilled(int killCount) 
 	{
 
-		return 0;
+		return 3000;
 	}
 	
 }
