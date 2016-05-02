@@ -19,10 +19,10 @@ public class Man extends IronMan
 		return 30256;
 	}
 
-	public int villainsKilled(int killCount) 
+	public int villainsKilled() 
 	{
 
-		return 1;
+		return 3;
 	}
 
 }

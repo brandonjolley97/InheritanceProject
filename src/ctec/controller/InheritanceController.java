@@ -35,7 +35,7 @@ public class InheritanceController
 		String philanthropist = "";
 		for(HeroThing currentHero : heroThings)
 		{
-			philanthropist += currentHero.toString() + currentHero.heroLevel() + " dollars \n";
+			philanthropist += currentHero.toString() + currentHero.philanthropist() + " dollars \n";
 		}
 		
 		return philanthropist;
@@ -46,7 +46,7 @@ public class InheritanceController
 		String villansKilled = "";
 		for(HeroThing currentHero : heroThings)
 		{
-			villansKilled += currentHero.toString() + currentHero.heroLevel() + " villains \n";
+			villansKilled += currentHero.toString() + currentHero.villainsKilled() + " villans \n";
 		}
 		
 		return villansKilled;

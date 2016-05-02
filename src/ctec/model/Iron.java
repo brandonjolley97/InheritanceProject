@@ -21,7 +21,7 @@ public class Iron extends IronMan
 		return 2000000000;
 	}
 
-	public int villainsKilled(int killCount)
+	public int villainsKilled()
 	{
 
 		return 1042;

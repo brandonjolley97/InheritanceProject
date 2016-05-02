@@ -20,7 +20,7 @@ public class Suit extends IronMan
 		return 75;
 	}
 
-	public int villainsKilled(int killCount) 
+	public int villainsKilled() 
 	{
 
 		return 3000;
